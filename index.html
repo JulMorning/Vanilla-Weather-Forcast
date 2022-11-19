@@ -24,26 +24,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-card">
-        <h1>Kyiv</h1>
-        <ul>
-          <li>Saturday, 10:37</li>
-          <li>Snow</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-              alt="Snow"
-            />
-            -1ºC | ºF
-          </div>
-
-          <div class="col-6">
+      <div class="wrapper">
+        <div class="weather-app-card">
+          <div class="overview">
+            <h1>Kyiv</h1>
             <ul>
-              <li>Humidity: 94%</li>
-              <li>Wind: 12 km/h</li>
+              <li>Saturday, 10:37</li>
+              <li>Snow</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="Snow"
+                  id="icon"
+                />
+                <div>
+                  <strong id="temperature">-1</strong
+                  ><span class="units">°C | ºF</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <ul>
+                <li>Humidity: 94%</li>
+                <li>Wind: 12 km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small
