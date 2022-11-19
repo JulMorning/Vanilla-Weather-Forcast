@@ -27,10 +27,10 @@
       <div class="wrapper">
         <div class="weather-app-card">
           <div class="overview">
-            <h1>Kyiv</h1>
+            <h1 id="city">Kyiv</h1>
             <ul>
-              <li>Saturday, 10:37</li>
-              <li>Snow</li>
+              <li id="current-day">Saturday, 10:37</li>
+              <li id="description">Snow</li>
             </ul>
           </div>
           <div class="row">
@@ -50,8 +50,8 @@
 
             <div class="col-6">
               <ul>
-                <li>Humidity: 94%</li>
-                <li>Wind: 12 km/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
