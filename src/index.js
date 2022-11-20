@@ -34,9 +34,15 @@ function displayWeatherCondition(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let nowElement = document.querySelector("#now");
   nowElement.innerHTML = formatDate(response.data.dt * 1000);
+  let weatherIconElement = document.querySelector("#weather-icon");
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "5dd071644aff4379355022a20839a99e";
-let city = "Kyiv";
+let city = "Lisbon";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayWeatherCondition);
