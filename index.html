@@ -26,6 +26,22 @@
     <div class="container">
       <div class="wrapper">
         <div class="weather-app-card">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city name"
+                  class="form-control"
+                  autocomplete="off"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" class="search-button" />
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1 id="city">Kyiv</h1>
             <ul>
@@ -36,11 +52,7 @@
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <img
-                  src=""
-                  alt="Snow"
-                  id="weather-icon"
-                />
+                <img src="" alt="Snow" id="weather-icon" />
                 <div>
                   <strong id="temperature">-1</strong
                   ><span class="units">°C | ºF</span>

@@ -56,3 +56,18 @@ li:first-letter {
   top: -34px;
   font-size: 16px;
 }
+.search-button {
+  width: 100px;
+  padding: 6px 10px;
+  background-color: #4ac5c5;
+  color: #fff;
+  border: 1px solid #4ac5c5;
+  border-radius: 4px;
+}
+.form-control {
+  border: 1px solid #4ac5c5;
+  border-radius: 4px;
+}
+#search-form {
+  margin-bottom: 20px;
+}
