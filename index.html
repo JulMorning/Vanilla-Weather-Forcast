@@ -49,25 +49,34 @@
               <li id="description">Snow</li>
             </ul>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex weather-temperature">
-                <img src="" alt="Snow" id="weather-icon" />
-                <div>
-                  <strong id="temperature">-1</strong
-                  ><span class="units"
-                    ><a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">ºF</a></span
-                  >
+          <div class="weatherInfo">
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img src="" alt="Snow" id="weather-icon" />
+                  <div>
+                    <strong id="temperature">-1</strong
+                    ><span class="units"
+                      ><a href="#" id="celsius-link" class="active">°C</a> |
+                      <a href="#" id="fahrenheit-link">ºF</a></span
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
+              <div class="col-6">
+                <ul>
+                  <li>
+                    Real feel: <strong><span id="real-feel"></span> °C</strong>
+                  </li>
+                  <li>
+                    Humidity: <strong><span id="humidity"></span> %</strong>
+                  </li>
+                  <li>
+                    Wind: <strong><span id="wind"></span> km/h</strong>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

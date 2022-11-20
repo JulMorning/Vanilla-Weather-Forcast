@@ -24,6 +24,7 @@ function formatDate(timestamp) {
 function displayWeatherCondition(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
+  let realFeelElement = document.querySelector("#real-feel");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -35,6 +36,7 @@ function displayWeatherCondition(response) {
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   descriptionElement.innerHTML = response.data.weather[0].description;
+  realFeelElement.innerHTML = Math.round(response.data.main.feels_like);
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   nowElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -49,6 +51,7 @@ function search(city) {
   let apiKey = "5dd071644aff4379355022a20839a99e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+  console.log(apiUrl);
 }
 
 function handleSubmit(event) {
