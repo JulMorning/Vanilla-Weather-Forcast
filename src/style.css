@@ -24,6 +24,9 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+a {
+  text-decoration: none;
+}
 
 .wrapper {
   max-width: 600px;
@@ -45,6 +48,14 @@ li:first-letter {
   height: 64px;
   width: 64px;
 }
+.weather-temperature .active {
+  color: #0c151c;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
 #temperature {
   color: #0c151c;
   font-size: 64px;
