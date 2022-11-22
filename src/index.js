@@ -21,6 +21,33 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function displayForcast() {
+  let forcastElement = document.querySelector("#forcast");
+  let forcastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      ` <div class="col-2">
+        <div class="weather-forcast-day">${day}</div>
+        <div class="weather-forcast-icon">
+            <img
+                src="https://ssl.gstatic.com/onebox/weather/48/snow_s_rain.png"
+                alt="Snow"
+                width="40"
+                />
+            </div>
+        <div class="weather-forcast-temperature">
+        <span class="temperature-max">1º</span>
+        <span class="temperature-min">-3º</span>
+        </div>
+    </div>`;
+  });
+
+  forcastHTML = forcastHTML + `</div>`;
+  forcastElement.innerHTML = forcastHTML;
+}
+
 function displayWeatherCondition(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
@@ -90,3 +117,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Kyiv");
+displayForcast();

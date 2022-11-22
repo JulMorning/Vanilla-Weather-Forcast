@@ -93,17 +93,17 @@ a {
 }
 
 .weather-forcast-day {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #0c151c;
 }
 .temperature-max {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   color: #4ac5c5;
 }
 .temperature-min {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #666464;
 }
