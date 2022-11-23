@@ -21,32 +21,34 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
-function displayForcast() {
-  let forcastElement = document.querySelector("#forcast");
-  let forcastHTML = `<div class="row">`;
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed"];
   days.forEach(function (day) {
-    forcastHTML =
-      forcastHTML +
+    forecastHTML =
+      forecastHTML +
       ` <div class="col-2">
-        <div class="weather-forcast-day">${day}</div>
-        <div class="weather-forcast-icon">
+        <div class="weather-forecast-day">${day}</div>
+        <div class="weather-forecast-icon">
             <img
                 src="https://ssl.gstatic.com/onebox/weather/48/snow_s_rain.png"
                 alt="Snow"
                 width="40"
                 />
             </div>
-        <div class="weather-forcast-temperature">
+        <div class="weather-forecast-temperature">
         <span class="temperature-max">1º</span>
         <span class="temperature-min">-3º</span>
         </div>
     </div>`;
   });
 
-  forcastHTML = forcastHTML + `</div>`;
-  forcastElement.innerHTML = forcastHTML;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
+
+function getForecast() {}
 
 function displayWeatherCondition(response) {
   let cityElement = document.querySelector("#city");
@@ -72,6 +74,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast();
 }
 
 function search(city) {
@@ -117,4 +121,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Kyiv");
-displayForcast();
+displayForecast();
