@@ -7,6 +7,7 @@ h1 {
   font-size: 34px;
   font-weight: 500;
   line-height: 36px;
+  margin-bottom: 0;
 }
 ul {
   margin: 0;
@@ -41,6 +42,11 @@ a {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
+.country {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
 .overview {
   margin-bottom: 20px;
 }
@@ -69,19 +75,19 @@ a {
   font-size: 16px;
 }
 .weatherInfo li strong {
-  color: #4ac5c5;
+  color: #8cc8f2;
   font-weight: 400;
 }
 .search-button {
   width: 100px;
   padding: 6px 10px;
-  background-color: #4ac5c5;
+  background-color: #8cc8f2;
   color: #fff;
-  border: 1px solid #4ac5c5;
+  border: 1px solid #8cc8f2;
   border-radius: 4px;
 }
 .form-control {
-  border: 1px solid #4ac5c5;
+  border: 1px solid #8cc8f2;
   border-radius: 4px;
 }
 #search-form {
@@ -100,10 +106,13 @@ a {
 .temperature-max {
   font-size: 15px;
   font-weight: 600;
-  color: #4ac5c5;
+  color: #8cc8f2;
 }
 .temperature-min {
   font-size: 15px;
   font-weight: 400;
   color: #666464;
+}
+#country {
+  color: #8cc8f2;
 }

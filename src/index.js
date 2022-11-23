@@ -52,6 +52,7 @@ function getForecast() {}
 
 function displayWeatherCondition(response) {
   let cityElement = document.querySelector("#city");
+  let countryElement = document.querySelector("#country");
   let temperatureElement = document.querySelector("#temperature");
   let realFeelElement = document.querySelector("#real-feel");
   let descriptionElement = document.querySelector("#description");
@@ -63,6 +64,7 @@ function displayWeatherCondition(response) {
   celsiusTemperature = response.data.temperature.current;
 
   cityElement.innerHTML = response.data.city;
+  countryElement.innerHTML = response.data.country;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   descriptionElement.innerHTML = response.data.condition.description;
   realFeelElement.innerHTML = Math.round(response.data.temperature.feels_like);
