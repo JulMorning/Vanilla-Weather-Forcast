@@ -75,19 +75,19 @@ a {
   font-size: 16px;
 }
 .weatherInfo li strong {
-  color: #8cc8f2;
+  color: #1b78af;
   font-weight: 400;
 }
 .search-button {
   width: 100px;
   padding: 6px 10px;
-  background-color: #8cc8f2;
+  background-color: #1b78af;
   color: #fff;
-  border: 1px solid #8cc8f2;
+  border: 1px solid #1b78af;
   border-radius: 4px;
 }
 .form-control {
-  border: 1px solid #8cc8f2;
+  border: 1px solid #1b78af;
   border-radius: 4px;
 }
 #search-form {
@@ -106,7 +106,7 @@ a {
 .temperature-max {
   font-size: 15px;
   font-weight: 600;
-  color: #8cc8f2;
+  color: #1b78af;
 }
 .temperature-min {
   font-size: 15px;
@@ -114,5 +114,5 @@ a {
   color: #666464;
 }
 #country {
-  color: #8cc8f2;
+  color: #1b78af;
 }
